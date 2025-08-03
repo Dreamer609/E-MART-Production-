@@ -1,0 +1,41 @@
+/*Using tailwind for responsiveness*/
+
+.inputConatiner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #d1caca9c;
+    position: relative;
+}
+
+.inputConatiner:focus-within{
+  box-shadow: 0 0 0 2px #bfdbfe;
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+.searchField{
+  width: 100%;
+  padding-inline: 1rem;
+  padding-block: 8px;
+  outline: none;
+
+}
+
+.searchBtn{
+  min-width: fit-content;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10px;
+  padding-block: 9px;
+  border-top-right-radius: calc(infinity * 1px);
+  border-bottom-right-radius: calc(infinity * 1px);
+}
+
+.searchBtn:active{
+  background-color: #e5e7eb;
+}

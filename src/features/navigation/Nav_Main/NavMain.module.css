@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+.navContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-color: #d1caca7c;
+}
+
+.brandWrapper{
+ min-width: fit-content;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.linksWrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.accountWrapper{
+  min-width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-items: center;
+}
+
+.account{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}

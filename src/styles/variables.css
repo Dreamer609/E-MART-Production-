@@ -1,0 +1,12 @@
+:root {
+  /* Color variables */
+  --primary-font: #1E293B;
+  --bg-footer: #292F36;
+  --primary-sky-blue: #3971EB;
+  --bg-button-sale: #FF001A;
+  --bg-button-new: #FFE100;
+  --fill-stars: #FFF04C;
+  --font-stock: #4CB04F;
+  --footer-border: rgba(57, 113, 235, 0.28);
+  --bg-page: #182132;
+}
