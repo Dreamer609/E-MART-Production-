@@ -10,9 +10,9 @@ const Icon = ({ name, className, ...props }: IconProps) => {
   const LazyIcon = lazy(() => import(`@icon/${name}.svg?react`)); // Dynamic SVG rendering
 
   return (
-    <Suspense fallback={name}>
+    <Suspense fallback={<div></div>}>
       <LazyIcon
-        className={`min-w-2 min-h-2 ${className}`}
+        className={`min-w-3 min-h-3 ${className}`}
         aria-hidden="true"
         focusable="false"
         {...props}

@@ -15,7 +15,6 @@ const InputBox: React.FC<ProductSearchInputProps> = ({
   ...props
 }) => {
   return (
-    
       <div
         className={`${style.inputConatiner} border-1 rounded-full lg:min-w-120 md:min-w-100 max-w-70`}
       >

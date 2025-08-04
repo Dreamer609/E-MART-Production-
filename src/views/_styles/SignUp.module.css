@@ -1,0 +1,39 @@
+
+.SignUpContainer{
+  min-height: calc(100vh - 48px);
+  display: flex;
+  background-color: aqua;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.formContainer{
+   width: 100%;
+   min-height: calc(100vh - 48px);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: white;
+}
+
+.updatesContainer{
+   width: 100%;
+   min-height: calc(100vh - 48px);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--bg-page);
+}
+
+
+
+@media (width <= 50rem /* 800px */){
+  .SignUpContainer{
+    flex-direction: column;
+  }
+}
+
+
+

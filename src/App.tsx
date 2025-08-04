@@ -4,9 +4,11 @@ import { ErrorBoundary } from "react-error-boundary";
 
 // Layouts
 const HomeLayout = lazy(() => import("./views_layouts/HomeLayout"));
+const SignUpLayout = lazy(() => import("./views_layouts/SignUpLayout"));
 
 // Pages
 const HomePage = lazy(() => import("./views/Home"));
+const SignUpPage = lazy(() => import("./views/SignUp"));
 
 // Error fallback component
 const ErrorFallback = ({ error }: { error: Error }) => (
@@ -36,6 +38,7 @@ const PageSkeleton = () => (
 function App() {
   return (
     <Routes>
+      {/*Home Page Loader*/}
       <Route
         element={
           <ErrorBoundary FallbackComponent={ErrorFallback}>
@@ -54,6 +57,36 @@ function App() {
           }
         />
       </Route>
+
+      {/*SignUp Page Loader*/}
+      <Route
+        element={
+          <ErrorBoundary FallbackComponent={ErrorFallback}>
+            <Suspense fallback={<LayoutSkeleton />}>
+              <SignUpLayout />
+            </Suspense>
+          </ErrorBoundary>
+        }
+      >
+        <Route
+          path="/signup"
+          element={
+            <Suspense fallback={<PageSkeleton />}>
+              <SignUpPage />
+            </Suspense>
+          }
+        />
+      </Route>
+
+      {/* 404 Not Found Route */}
+      <Route
+        path="*"
+        element={
+          <div className="flex items-center justify-center h-screen">
+            <h1 className="text-2xl font-bold">404 - Page Not Found</h1>
+          </div>
+        }
+      />
     </Routes>
   );
 }

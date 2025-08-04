@@ -42,8 +42,10 @@ const NavMain = ({links}: NavMainProps) => {
           <Icon name="bell" className="w-4 h-4" />
         </Link>
         <Link to="/" className={`${styles.account} gap-1`}>
-            <h3 className="text-[12px] font-medium">{isLogedIn == true ? "Account" : "Guest"}</h3>
-            <Icon name="profile" className="w-4 h-4" />
+          <h3 className="text-[12px] font-medium">
+            {isLogedIn == true ? "Account" : "Guest"}
+          </h3>
+          <Icon name="profile" className="w-4 h-4" />
         </Link>
       </div>
     </nav>
