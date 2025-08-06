@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./NavMain.module.css"
-import Icon from "@components/ui/Icon"
+import Icon from "@components/ui/Icon";
 import {Link, NavLink } from 'react-router-dom';
 
 

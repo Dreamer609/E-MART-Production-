@@ -1,5 +1,5 @@
 import React, { type InputHTMLAttributes, type ReactNode } from "react";
-import style from "./InputBox.module.css";
+import style from "./SearchBox.module.css";
 
 interface ProductSearchInputProps
   extends InputHTMLAttributes<HTMLInputElement> {

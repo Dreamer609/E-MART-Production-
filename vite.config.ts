@@ -12,8 +12,8 @@ export default defineConfig({
     alias: {
       "@src": path.resolve(__dirname, "src"),
       "@icon": path.resolve(__dirname, "src/assets/icons"),
-      "@components": path.resolve(__dirname, "src/components"),
-      "@types": path.resolve(__dirname, "src/types"),
+      "@components": path.resolve(__dirname, "src/🌍_components"),
+      "@features": path.resolve(__dirname, "src/features"),
     },
   },
   plugins: [react(), svgr(), tailwindcss()],

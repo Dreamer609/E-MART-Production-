@@ -1,24 +1,20 @@
-import styles from "./_styles/SignUp.module.css"
-import Form from "@components/shared/form"
+import styles from "./styles/SignUp.module.css";
+import SignUpForm from "@features/auth/📍_components/forms/SignUpForm";
 
-const SignIn = () => {
+const SignUp = () => {
   return (
-    <div
-      className={`${styles.SignUpContainer} flex-row-reverse`}
-    >
+    <div className={`${styles.SignUpContainer} flex-row-reverse`}>
       <div className={`${styles.formContainer}`}>
-        <Form
+        <SignUpForm
           formTitle="Sign Up"
           inputTypes={["text", "email", "password"]}
           labelTexts={["Name", "Email", "Password"]}
-          inputPlaceholders={["enter name", "your@gmail.com", "password"]}
+          inputPlaceholders={["your name", "your@gmail.com", "password"]}
         />
       </div>
-      <div className={`${styles.updatesContainer}`}>
-        Updates
-      </div>
+      <div className={`${styles.updatesContainer}`}>Updates</div>
     </div>
   );
-}
+};
 
-export default SignIn;
+export default SignUp;

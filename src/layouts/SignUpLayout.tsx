@@ -1,6 +1,6 @@
 import  {ReactNode}  from 'react'
 import { Outlet } from 'react-router-dom';
-import NavMain from "../features/navigation/Nav_Main/NavMain";
+import NavMain from "@features/navigation/Nav_Main/NavMain";
 
 interface HomeLayoutProps {
   childrenHome?: ReactNode;

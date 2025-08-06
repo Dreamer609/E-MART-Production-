@@ -1,5 +1,5 @@
 import { type InputHTMLAttributes, type ReactNode } from "react";
-import styles from "./_Input.module.css"
+import styles from "./styles/AuthField.module.css";
 
 interface FormFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   fieldType: string;
@@ -20,11 +20,14 @@ const FormField = ({
   ...props
 }: FormFieldProps) => {
   return (
-    <div className={`w-full ${styles.fieldContainer}`}>
-      <label htmlFor={label.htmlFor}>
+    <div className={`${styles.fieldContainer}`}>
+      <label
+        htmlFor={label.htmlFor}
+        className={`${styles.fieldLabel} text-sm font-medium`}
+      >
         {label.text}
       </label>
-      <div className="relative">
+      <div className={`${styles.fieldWrapper} relative`}>
         <input
           type={fieldType}
           className={`${styles.field}`}

@@ -1,28 +1,30 @@
-import FormField from "@components/ui/form_ui/_Input";
-import Icon from "@components/ui/Icon"
-import styles from "./_styles/form.module.css"
+import FormField from "../shared/AuthField";
+import Icon from "src/🌍_components/ui/Icon";
+import styles from "./styles/form.module.css";
 import { Link } from "react-router-dom";
-
+import Button from "../shared/AuthSubmitButton";
 
 interface FormProps {
   formTitle: string;
   inputTypes: string[];
   labelTexts: string[];
   inputPlaceholders: string[];
+  btnText?: string;
 }
 
-const Form = ({
+const SignUpForm = ({
   formTitle,
   inputTypes,
   labelTexts,
+  btnText,
   inputPlaceholders,
 }: FormProps) => {
   return (
-    <form action="/home" className={`min-h-120 w-80 ${styles.form}`}>
-      <div className="form-header">
-        <h2>{formTitle}</h2>
+    <form action="#" className={`min-h-120 w-80 ${styles.form}`}>
+      <div className={`${styles.formHeader} w-full my-6 text-2xl`}>
+        <h2 className="mx-8">{formTitle}</h2>
       </div>
-      <div className="inputs-wrapper">
+      <div className="w-full">
         {inputTypes.map((inputType, index) => (
           <FormField
             key={`${inputType}-${index}`}
@@ -37,17 +39,22 @@ const Form = ({
             placeholder={inputPlaceholders[index]}
           />
         ))}
-
         <div className={`${styles.termsCheckContainer} gap-1`}>
           <input type="checkbox" title="check" />
           <span className={`text-sm`}>
             agree to
-            <Link to="/" className={`text-cyan-500`}>Terms & Condition</Link>
+            <Link to="#" className={`text-[var(--primary-sky-blue)] mx-1`}>
+              Terms & Condition
+            </Link>
           </span>
         </div>
       </div>
+      <div className="SubmitBtn w-full">
+        <Button btnText={btnText || "Register"} />
+      </div>
+      <div className="signUpAlternatives w-full"></div>
     </form>
   );
 };
 
-export default Form;
+export default SignUpForm;

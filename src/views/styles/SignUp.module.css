@@ -2,7 +2,6 @@
 .SignUpContainer{
   min-height: calc(100vh - 48px);
   display: flex;
-  background-color: aqua;
   align-items: center; 
   justify-content: space-between;
 }

@@ -1,7 +1,7 @@
 import { lazy, StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { ErrorBoundary } from "react-error-boundary";
-import "./styles/global.css";
+import "./🌍_styles/global.css";
 import { BrowserRouter } from "react-router-dom";
 
 const LazyApp: React.FC = lazy(() => import("./App"));

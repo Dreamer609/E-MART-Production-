@@ -3,12 +3,14 @@ import { lazy, Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
 // Layouts
-const HomeLayout = lazy(() => import("./views_layouts/HomeLayout"));
-const SignUpLayout = lazy(() => import("./views_layouts/SignUpLayout"));
+const HomeLayout = lazy(() => import("./layouts/HomeLayout"));
+const SignUpLayout = lazy(() => import("./layouts/SignUpLayout"));
+const SignInLayout = lazy(() => import("./layouts/SignInLayout"));
 
 // Pages
 const HomePage = lazy(() => import("./views/Home"));
 const SignUpPage = lazy(() => import("./views/SignUp"));
+const SignInPage = lazy(() => import("./views/SignIn"));
 
 // Error fallback component
 const ErrorFallback = ({ error }: { error: Error }) => (
@@ -73,6 +75,26 @@ function App() {
           element={
             <Suspense fallback={<PageSkeleton />}>
               <SignUpPage />
+            </Suspense>
+          }
+        />
+      </Route>
+
+      {/*SignIn Page Loader*/}
+      <Route
+        element={
+          <ErrorBoundary FallbackComponent={ErrorFallback}>
+            <Suspense fallback={<LayoutSkeleton />}>
+              <SignInLayout />
+            </Suspense>
+          </ErrorBoundary>
+        }
+      >
+        <Route
+          path="/signin"
+          element={
+            <Suspense fallback={<PageSkeleton />}>
+              <SignInPage />
             </Suspense>
           }
         />

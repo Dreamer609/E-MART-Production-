@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./NavSearch.module.css"
 import Icon from "@components/ui/Icon";
-import InputBox from "./module/InputBox";
+import InputBox from "./module/SearchBox";
 
 const NavSearch = () => {
   return (
