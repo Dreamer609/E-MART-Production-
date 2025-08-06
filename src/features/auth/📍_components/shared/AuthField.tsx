@@ -1,4 +1,4 @@
-import { type InputHTMLAttributes, type ReactNode } from "react";
+import { useState, type InputHTMLAttributes, type ReactNode } from "react";
 import styles from "./styles/AuthField.module.css";
 
 interface FormFieldProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -13,12 +13,16 @@ interface FormFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   };
 }
 
-const FormField = ({
+const AuthField = ({
   fieldType,
   buttonIcon,
   label,
   ...props
 }: FormFieldProps) => {
+  const [getType, setType] = useState(fieldType);
+  const changeVisibility = () =>
+    setType((prevType) => (prevType === "password" ? "text" : "password"));
+
   return (
     <div className={`${styles.fieldContainer}`}>
       <label
@@ -29,7 +33,7 @@ const FormField = ({
       </label>
       <div className={`${styles.fieldWrapper} relative`}>
         <input
-          type={fieldType}
+          type={getType}
           className={`${styles.field}`}
           id={label.htmlFor}
           {...props}
@@ -37,6 +41,7 @@ const FormField = ({
         {fieldType === "password" && buttonIcon && (
           <button
             type="button"
+            onClick={changeVisibility}
             className={`absolute right-2 top-1/2 transform -translate-y-1/2`}
           >
             {buttonIcon}
@@ -47,4 +52,4 @@ const FormField = ({
   );
 };
 
-export default FormField;
+export default AuthField;

@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom-color: #d1caca7c;
-  background-color: white;
+  background-color: var(--test-bg);
+  color: white;
 }
 
 .brandWrapper{
@@ -23,7 +23,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .accountWrapper{

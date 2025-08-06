@@ -1,0 +1,12 @@
+
+.authLinksContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link{
+  min-width: fit-content;
+  background-color: #d1d5dc;
+  border-radius: 100%;
+}

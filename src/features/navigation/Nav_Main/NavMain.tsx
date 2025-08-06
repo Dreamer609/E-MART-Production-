@@ -11,7 +11,7 @@ interface NavMainProps{
 const NavMain = ({links}: NavMainProps) => {
     const isLogedIn: boolean = true;
   return (
-    <nav className={`${styles.navContainer} h-12 border-b-1`}>
+    <nav className={`${styles.navContainer} h-12`}>
       <Link to="/" className={`${styles.brandWrapper} mx-8 gap-2`}>
         <Icon name="logo" className="w-8 h-8" />
         <h2 className="w-fit font-bold lg:text-2xl min-sm:text-xl">E-MART</h2>
@@ -19,7 +19,7 @@ const NavMain = ({links}: NavMainProps) => {
 
       {/*Dropdown link will be added soon for mobile verison*/}
 
-      <ul className={`${styles.linksWrapper} gap-4`}>
+      <ul className={`${styles.linksWrapper} gap-4 font-medium`}>
         {links.map((link) => {
           const isHome: boolean = link.toLowerCase() === "home";
           const path: string = isHome ? "/" : `/${link.toLowerCase()}`;

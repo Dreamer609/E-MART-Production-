@@ -1,8 +1,9 @@
-
 .navSearch{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom-color: #d1caca7c;
+  background-color: var(--test-bg);
+  color: white;
 }

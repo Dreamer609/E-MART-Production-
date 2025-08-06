@@ -6,7 +6,7 @@ interface HomeLayoutProps {
   childrenHome?: ReactNode;
 }
 
-const SignInLayout = ({ childrenHome }: HomeLayoutProps) => {
+const ResetPasswordLayout = ({ childrenHome }: HomeLayoutProps) => {
   return (
     <div className="homeContainer w-screen flex flex-col">
       <header>
@@ -17,4 +17,4 @@ const SignInLayout = ({ childrenHome }: HomeLayoutProps) => {
   );
 };
 
-export default SignInLayout;
+export default ResetPasswordLayout;

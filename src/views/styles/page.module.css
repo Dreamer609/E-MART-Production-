@@ -1,5 +1,4 @@
-
-.SignUpContainer{
+.pageContainer{
   min-height: calc(100vh - 48px);
   display: flex;
   align-items: center; 
@@ -23,13 +22,11 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   background-color: var(--bg-page);
+   background-color: #bbbbbb8f;
 }
 
-
-
 @media (width <= 50rem /* 800px */){
-  .SignUpContainer{
+  .pageContainer{
     flex-direction: column;
   }
 }

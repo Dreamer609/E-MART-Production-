@@ -1,4 +1,4 @@
-import styles from "./_styles/_Button.module.css";
+import styles from "./styles/AuthSubmitButton.module.css";
 
 interface ButtonProps {
   btnText: string;
@@ -6,7 +6,7 @@ interface ButtonProps {
   containerClass?: string;
 }
 
-export const Button = ({
+const AuthSubmitButton = ({
   containerClass,
   btnClass,
   btnText,
@@ -20,4 +20,4 @@ export const Button = ({
   );
 };
 
-export default Button;
+export default AuthSubmitButton;

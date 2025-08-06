@@ -12,7 +12,7 @@ interface FormProps {
   btnText?: string;
 }
 
-const LoginForm = ({
+const ResetPasswordForm = ({
   formTitle,
   inputTypes,
   labelTexts,
@@ -45,16 +45,13 @@ const LoginForm = ({
             <input type="checkbox" title="check" />
             <span className={`text-sm`}>Remember me</span>
           </div>
-          <div className="text-[12px] text-[var(--primary-sky-blue)]">
-            <Link to="#">Forgot Password</Link>
-          </div>
         </div>
       </div>
       <div className="SubmitBtn w-full">
-        <Button btnText={btnText || "Submit"} />
+        <Button btnText={btnText || "Reset"} />
       </div>
-      <div className={`${styles.haveAccount} text-sm gap-1 `}>
-        <span>Don't have an account?</span>
+      <div className={`${styles.haveAccount} text-[12px] gap-1 my-4`}>
+        <span>New to the site?</span>
         <Link to="/signup" className="text-[var(--primary-sky-blue)]">
           SignUp
         </Link>
@@ -63,4 +60,4 @@ const LoginForm = ({
   );
 };
 
-export default LoginForm;
+export default ResetPasswordForm;

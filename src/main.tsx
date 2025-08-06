@@ -5,7 +5,7 @@ import "./🌍_styles/global.css";
 import { BrowserRouter } from "react-router-dom";
 
 const LazyApp: React.FC = lazy(() => import("./App"));
-
+          
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
@@ -15,8 +15,9 @@ createRoot(document.getElementById("root")!).render(
       >
         <Suspense
           fallback={
-            <div className=" w-screen h-screen flex flex-col items-center justify-center">
-              Loading App ......
+            <div className=" w-screen h-screen flex flex-col items-center justify-center bg-black gap-2">
+              <h2 className="text-4xl font-bold text-gray-700">E-MART</h2>
+              <p className="text-white font-medium text-sm">Trade with Trust</p>
             </div>
           }
         >

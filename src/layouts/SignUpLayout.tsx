@@ -10,7 +10,7 @@ const SignUpLayout = ({ childrenHome }: HomeLayoutProps) => {
   return (
     <div className="homeContainer w-screen flex flex-col">
       <header>
-        <NavMain links={["Home", "New Arrivles", "SignUp", "SignIn"]} />
+        <NavMain links={["Home", "ResetPassword", "SignUp", "SignIn"]} />
       </header>
       <main>{childrenHome || <Outlet />}</main>
     </div>

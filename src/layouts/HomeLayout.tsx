@@ -11,7 +11,7 @@ const HomeLayout = ({ childrenHome }: HomeLayoutProps) => {
   return (
     <div className="homeContainer w-screen flex flex-col">
       <header className="w-screen">
-        <NavMain links={["Home", "New Arrivles", "SignUp", "SignIn"]} />
+        <NavMain links={["Home", "ResetPassword", "SignUp", "SignIn"]} />
         <NavSearch />
       </header>
       <main>{childrenHome || <Outlet />}</main>

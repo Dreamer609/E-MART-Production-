@@ -6,11 +6,13 @@ import { ErrorBoundary } from "react-error-boundary";
 const HomeLayout = lazy(() => import("./layouts/HomeLayout"));
 const SignUpLayout = lazy(() => import("./layouts/SignUpLayout"));
 const SignInLayout = lazy(() => import("./layouts/SignInLayout"));
+const ResetPasswordLayout = lazy(() => import("./layouts/ResetPasswordLayout"));
 
 // Pages
 const HomePage = lazy(() => import("./views/Home"));
 const SignUpPage = lazy(() => import("./views/SignUp"));
 const SignInPage = lazy(() => import("./views/SignIn"));
+const ResetPasswordPage = lazy(() => import("./views/ResetPassword"));
 
 // Error fallback component
 const ErrorFallback = ({ error }: { error: Error }) => (
@@ -95,6 +97,26 @@ function App() {
           element={
             <Suspense fallback={<PageSkeleton />}>
               <SignInPage />
+            </Suspense>
+          }
+        />
+      </Route>
+
+      {/*ResetPassword Page Loader*/}
+      <Route
+        element={
+          <ErrorBoundary FallbackComponent={ErrorFallback}>
+            <Suspense fallback={<LayoutSkeleton />}>
+              <ResetPasswordLayout />
+            </Suspense>
+          </ErrorBoundary>
+        }
+      >
+        <Route
+          path="/resetpassword"
+          element={
+            <Suspense fallback={<PageSkeleton />}>
+              <ResetPasswordPage />
             </Suspense>
           }
         />

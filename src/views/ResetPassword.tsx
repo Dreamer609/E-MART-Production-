@@ -1,20 +1,20 @@
 import styles from "./styles/page.module.css";
-import SignUpForm from "@features/auth/📍_components/forms/SignUpForm";
+import ResetPasswordForm from "@features/auth/📍_components/forms/ResetPasswordForm";
 
-const SignUp = () => {
+const ResetPassword = () => {
   return (
     <div className={`${styles.pageContainer} flex-row-reverse`}>
       <div className={`${styles.formContainer}`}>
-        <SignUpForm
-          formTitle="Sign Up"
-          inputTypes={["text", "email", "password"]}
-          labelTexts={["Name", "Email", "Password"]}
-          inputPlaceholders={["your name", "your@gmail.com", "password"]}
+        <ResetPasswordForm
+          formTitle="Password Reset"
+          inputTypes={["text", "password", "password"]}
+          labelTexts={["Email", "Password", "Confirm Password"]}
+          inputPlaceholders={["your@gmail.com", "password", "confirm password"]}
         />
       </div>
       <div className={`${styles.updatesContainer}`}>
         <div className={`greetings`}>
-          <h1>Welcome Back</h1>
+          <h1>Welcome</h1>
         </div>
         <div className={`new&updates`}>
           <div>Hello</div>
@@ -25,4 +25,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default ResetPassword;

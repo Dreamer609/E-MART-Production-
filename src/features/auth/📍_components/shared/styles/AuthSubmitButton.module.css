@@ -2,6 +2,7 @@
 .btnContainer{
   width: auto;
   margin-inline: 32px;
+  margin-block: 10px;
 }
 
 .btnContainer > button{

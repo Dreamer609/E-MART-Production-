@@ -1,8 +1,9 @@
-import FormField from "../shared/AuthField";
-import Icon from "src/🌍_components/ui/Icon";
+import AuthField from "../shared/AuthField";
+import Icon from "@components/ui/Icon";
 import styles from "./styles/form.module.css";
 import { Link } from "react-router-dom";
-import Button from "../shared/AuthSubmitButton";
+import AuthSubmitButton from "../shared/AuthSubmitButton";
+import OAuthLinks from "../shared/OAuthLinks";
 
 interface FormProps {
   formTitle: string;
@@ -26,7 +27,7 @@ const SignUpForm = ({
       </div>
       <div className="w-full">
         {inputTypes.map((inputType, index) => (
-          <FormField
+          <AuthField
             key={`${inputType}-${index}`}
             fieldType={inputType}
             label={{
@@ -50,9 +51,17 @@ const SignUpForm = ({
         </div>
       </div>
       <div className="SubmitBtn w-full">
-        <Button btnText={btnText || "Register"} />
+        <AuthSubmitButton btnText={btnText || "Register"} />
       </div>
-      <div className="signUpAlternatives w-full"></div>
+      <div className="signUpAlternatives w-full my-4">
+        <OAuthLinks providers={["google", "facebook", "twitter"]} />
+      </div>
+      <div className={`${styles.haveAccount} text-sm gap-1`}>
+        <span>Already Have an account?</span>
+        <Link to="/signin" className="text-[var(--primary-sky-blue)]">
+          SignIn
+        </Link>
+      </div>
     </form>
   );
 };
